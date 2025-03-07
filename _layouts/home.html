@@ -1,0 +1,17 @@
+---
+layout: default
+---
+<div class="home">
+  <h1 class="page-heading">articles</h1>
+  {%- if strapi.collections.articles.size > 0 -%}
+  <ul>
+    {%- for article in strapi.collections.articles -%}
+    <li>
+      <a href="{{ article.url }}">Title: {{ article.strapi_attributes.Title }}</a>
+      <p>{{ article.content | markdownify | strip_html | truncatewords: 10 }}</p>
+
+    </li>
+    {%- endfor -%}
+  </ul>
+  {%- endif -%}
+</div>

@@ -1,0 +1,25 @@
+---
+layout: default
+
+---
+
+<h1>{{page.document.strapi_attributes.Title}}</h1>
+
+<span class="article-meta">{{ page.document.strapi_attributes.publishedAt | date_to_string }}</span>
+
+<div id="main">
+{{page.document.strapi_attributes.content}}
+</div>
+
+
+{% for javascript in page.custom-javascript-list %}
+    <script src="{{ javascript }}"></script>
+{% endfor %}
+
+{% for css in page.custom-css-list %}
+    <link href="{{ css }}" rel="stylesheet">
+{% endfor %}
+
+{% capture callout_content %}
+Content to be filled with a URL: {{ site.baseurl }}/img/test.png
+{% endcapture %}
