@@ -7,7 +7,17 @@ source "https://rubygems.org"
 #
 # This will help ensure the proper Jekyll version is running.
 # Happy Jekylling!
-gem "jekyll", "~> 4.3.3"
+#gem "jekyll", "~> 4.3.3"
+
+#stuff jgd is asking for?
+gem "jekyll", "~> 4.3.4"
+gem "jekyll-sass-converter", "~> 3.1.0"
+gem "bigdecimal", "~> 3.1.9"
+gem "google-protobuf", "~> 4.30.0"
+gem "sass-embedded", "~> 1.85.1"
+#gem "ffi", "~> 1.17.1"
+#gem "json"
+
 #gem "github-pages", group: :jekyll_plugins
 
 #gem "github-pages", "~> 232", group: :jekyll_plugins
